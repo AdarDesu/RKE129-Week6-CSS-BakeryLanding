@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&family=Tilt+Prism&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    animation: bgcolor 20s infinite linear;
+    background-color: #1e1e1e;
+    font-family: 'Tilt Prism', cursive;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+@keyframes bgcolor{
+    0% {background-color: #1e1e1e;}
+    25% {background-color: #130909;}
+    50% {background-color: #09130a;}
+    75% {background-color: #090b13;}
+    100% {background-color: #1e1e1e;}
+}
+
+
+.header{
+    background-image: linear-gradient(to bottom, #1e1e1e25, #1e1e1eff), url("../img/img1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 95vh;
+}
+
+.text-box{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.text-box h1{
+    color: #b39b8e;
+    text-shadow: 0 0 8px #291b12, 0 0 4px #3b1604, 0 0 3rem #000000;
+    text-transform: uppercase;
+}
+
+.heading-main{
+    animation: MoveLeft 2s ease-in-out forwards;
+    display: block;
+    font-size: 5rem;
+    letter-spacing: 1.1rem;
+    opacity: 0;
+    text-align: center;
+}
+
+@keyframes MoveLeft{
+
+    0%{
+    opacity: 0;
+    transform: translateX(-75rem);
+    }
+
+    80%{
+    transform: translateX(2rem);
+    }
+
+    100%{
+    opacity: 1;
+    transform: translateX(0rem);
+    }
+}
+
+.heading-sub{
+    animation: MoveRight 2s ease-in-out forwards;
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 2rem;
+    opacity: 0;
+    text-align: center;
+}
+
+@keyframes MoveRight{
+
+    0%{
+    opacity: 0;
+    transform: translateX(75rem);
+    }
+
+    80%{
+    transform: translateX(-2rem);
+    }
+
+    100%{
+    opacity: 1;
+    transform: translateX(0rem);
+    }
+}
+
+.btn-container{
+    text-align: center;
+}
+
+.btn{
+    background-color: #00000050;
+    border-bottom: 0.2rem solid #000000;
+    border-radius: 0.75rem;
+    color: #b9b9b9;
+    display: inline-block;
+    font-size: 3rem;
+    margin-top: 3rem;
+    padding: 0.8rem;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+.btn:hover{
+    background-color: #3b1b0c50;
+    border-bottom: 0.2rem solid #381708;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.5rem 1rem #00000050;
+    color: #ffddcd;
+    transform: translateY(-0.25rem);
+}
+
+.btn:active{
+    box-shadow: 0 0.25rem 0.5rem #00000050;
+    transform: translateY(0.25rem);
+}
+
+.main{
+    background-color: #1a1414;
+    clip-path: polygon(50% 5%, 100% 0, 100% 35%, 100% 92%, 0 100%, 0% 35%, 0 0);
+    height: 950px;
+    margin-top: -5rem;
+    padding-top: 8rem;
+    text-align: center;
+}
+
+.main h1{
+    color: #b39b8e;
+    text-shadow: 0 0 8px #291b12, 0 0 4px #3b1604, 0 0 3rem #000000;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.gallery{
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 75%;
+}
+
+.gallery_photo{
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 2rem #00000050;
+    outline: 0 solid #00000000;
+    outline-offset: 1rem;
+    position: absolute;
+    width: 55vh;
+    transition: all 0.5s;
+}
+
+.gallery_photo:hover{
+    animation: PhotoHover 3s infinite linear;
+    outline: 1rem solid #140d0980;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+@keyframes PhotoHover{
+    0% {box-shadow: 0 0 1.5rem #ffcaca;}
+    33% {box-shadow: 0 0 1.5rem #caffca;}
+    66% {box-shadow: 0 0 1.5rem #cacaff;}
+    100% {box-shadow: 0 0 1.5rem #ffcaca;}
+}
+
+.gallery_photo-1{
+    left: 52%;
+    top: 28%;
+}
+
+.gallery_photo-2{
+    left: 32%;
+    top: 18%;
+}
+
+.gallery_photo-3{
+    left: 12%;
+    top: 8%;
+}
+
+.footer{
+    display: block;
+    color: #b1b1b1;
+    font-family: 'Lobster', cursive;
+    font-size: 1.75rem;
+    height: 16vh;
+    padding-bottom: 1vh;
+    text-align: center;
+}
+
+.footer ul li{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.footer ul li:hover{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.footer ul li a{
+    color: #9faab1;
+}
+
+.footer ul li a:hover{
+    animation: LiHover 3s infinite linear;
+}
+
+@keyframes LiHover{
+    0% {color: #ffcaca;}
+    33% {color: #caffca;}
+    66% {color: #cacaff;}
+    100% {color: #ffcaca;}
+}
+
+.copywright{
+    font-family: 'Roboto', sans-serif;
+}
